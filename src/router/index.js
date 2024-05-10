@@ -1,10 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 console.log('router')
 const routes = [
-	{
-		path: '/test-page',
-		redirect: '/',
-	},
+	// {
+	// 	path: '/test-page',
+	// 	redirect: '/',
+	// },
 	{
 		path: '/',
 		component: () => import('../layouts/baseLayout.vue'),
@@ -43,7 +43,7 @@ const routes = [
 ]
 
 const router = createRouter({
-	history: createWebHistory(),
+	history: createWebHashHistory(),
 	routes,
 })
 console.log(router)
